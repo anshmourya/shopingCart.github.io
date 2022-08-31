@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Shopping Cart UI</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="style!!.css">
+</head>
+
+<body>
+	<div class="CartContainer">
+		<div class="Header">
+			<h3 class="Heading">Shopping Cart</h3>
+			<h5 class="Action" onclick="forRemoveAll()">Remove all</h5>
+		</div>
+
+		<div class="Cart-Items">
+			<div class="image-box">
+				<img src="images/apple.png" style={{ height="120px" }} />
+			</div>
+			<div class="about">
+				<h1 class="title">Apple Juice</h1>
+				<h3 class="subtitle">250ml</h3>
+				<img src="images/veg.png" style={{ height="30px" }} />
+			</div>
+			<div class="counter">
+				<div class="btn" id="plus1" onclick="forplus('count1','amt1','totalAmtOfAllProduct')">+</div>
+				<div class="count write" id="count1">0</div>
+				<div class="btn" id="minus1" onclick="forMinus('count1','amt1','totalAmtOfAllProduct')">-</div>
+			</div>
+			<div class="prices">
+				<div class="ruppe_sign">₹ <span id="amt1" class="amount">0</span></div>
+				<div class="remove" onclick="forRemove('count1','amt1','totalAmtOfAllProduct')"><u>Remove</u></div>
+			</div>
+		</div>
+
+		<div class="Cart-Items pad">
+			<div class="image-box">
+				<img src="images/grapes.png" style={{ height="120px" }} />
+			</div>
+			<div class="about">
+				<h1 class="title">Grapes Juice</h1>
+				<h3 class="subtitle">250ml</h3>
+				<img src="images/veg.png" style={{ height="30px" }} />
+			</div>
+			<div class="counter">
+				<div class="btn" id="plus2" onclick="forplus('count2','amt2','totalAmtOfAllProduct')">+</div>
+
+				<div class="count write" id="count2">0</div>
+				<div class="btn minus" id="mius2" onclick="forMinus('count2','amt2','totalAmtOfAllProduct')">-</div>
+			</div>
+			<div class="prices">
+				<div class="ruppe_sign">₹ <span id="amt2" class="amount">0</span></div>
+				<div class="remove" onclick="forRemove('count2','amt2','totalAmtOfAllProduct')"><u>Remove</u></div>
+			</div>
+		</div>
+		<hr>
+		<div class="checkout">
+			<div class="total">
+				<div>
+					<div class="Subtotal">Sub-Total</div>
+					<div class="items">2 items</div>
+				</div>
+				<div class="total-amount">₹ <span id="totalAmtOfAllProduct">0</span></div>
+			</div>
+			<button class="button" id="checkout">Checkout</button>
+			<h1 id="error" style="display: none;">Please Add Some Product.</h1>
+		</div>
+	</div>
+	<script src="index.js"></script>
+	<script src="/succes.js" type="module"></script>
+
+</body>
+
+</html>
